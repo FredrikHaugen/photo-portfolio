@@ -4,7 +4,7 @@ import { FaUnsplash, FaInstagram } from "react-icons/fa";
 export default function About() {
   return (
     <div className="p-12 py-24 h-auto bg-slate-100" id="about">
-      <div className="text-6xl md:text-7xl text-center md:text-left font-medium text-gray-300 pb-4 mb-16">
+      <div className="text-6xl md:text-7xl text-center md:text-left font-medium text-slate-900 pb-4 mb-16">
         About Me
       </div>
 

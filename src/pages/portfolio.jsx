@@ -3,11 +3,10 @@ import { FaBeer } from 'react-icons/fa';
 
 export default function Portfolio() {
   return (
-    <div className=" bg-slate-900 relative overflow-hidden h-auto" id="portfolio">
-      <div className=" max-w-6xl mx-auto p-5 py-20" id="experience">
-        <div className="text-6xl md:text-7xl text-center md:text-left font-medium text-gray-300 pb-4 mb-16">
-          Portfolio
-        </div>
+      <div className="p-12 py-24 h-auto bg-slate-900" id="portfolio">
+      <div className="text-6xl md:text-7xl text-center md:text-left font-medium text-gray-300 pb-4 mb-16">
+        Portfolio
+      </div>
 
         <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-4">
   {projects.map((proj) => {
@@ -36,7 +35,6 @@ export default function Portfolio() {
 </div>
 
       </div>
-    </div>
   );
 }
 

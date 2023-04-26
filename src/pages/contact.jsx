@@ -39,8 +39,8 @@ function ContactForm() {
   }
 
   return (
-    <div className=" max-w-full h-auto mx-auto p-5 py-20 bg-slate-100" id="contact">
-      <div className="text-6xl md:text-7xl text-center md:text-left font-medium text-gray-300 pb-4 mb-16">
+    <div className="p-12 py-24 h-auto bg-slate-100" id="contact">
+      <div className="text-6xl md:text-7xl text-center md:text-left font-medium text-slate-900 pb-4 mb-16">
         Contact Me
       </div>
       <div className="flex justify-center items-center">
