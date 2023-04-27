@@ -7,4 +7,5 @@ module.exports = {
     extend: {},
   },
   plugins: [],
+  devtool: false, // add this line to disable source map generation
 };
