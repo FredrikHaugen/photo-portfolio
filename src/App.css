@@ -4,6 +4,8 @@
 @tailwind components;
 @tailwind utilities;
 
+
+
 * {
   font-family: 'Lato', sans-serif;
   scroll-behavior: smooth;
@@ -24,14 +26,17 @@
   top: 0px;
   left: 0px;
   z-index: 1;
-  background: rgba(58, 58, 58, 0.5);
-  backdrop-filter: blur(5px);
+  background: linear-gradient(225deg, rgba(107, 107, 107, 0.45), rgba(62, 62, 62, 0.35));
+  border-bottom: 0.1px solid #333;
+  backdrop-filter: blur(3px);
   padding: 5px;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: ease-in-out 200ms;
 }
+
+
 
 .topbar .fa {
   display: none;
@@ -106,7 +111,7 @@
   margin: 10px 0px;
   padding: 10px 20px;
   box-sizing: border-box;
-  color: white;
+  color: rgb(255, 255, 255);
   text-decoration: none;
   transition: ease-in-out 200ms;
 }

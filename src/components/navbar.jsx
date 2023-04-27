@@ -55,23 +55,39 @@ export default function Navbar() {
   useEffect(() => {
     document.documentElement.style.scrollBehavior = "smooth";
     document.body.style.scrollBehavior = "smooth";
-  
+
     return () => {
       document.documentElement.style.scrollBehavior = "unset";
       document.body.style.scrollBehavior = "unset";
     };
   }, []);
-  
 
   useEffect(() => {
-    document.documentElement.style.scrollBehavior = "smooth";
-    document.body.style.scrollBehavior = "smooth";
+    const handleClickOutside = (e) => {
+      if (menuRef.current && !menuRef.current.contains(e.target)) {
+        closeMobileNav();
+      }
+    };
+
+    const handleResize = () => {
+      if (window.innerWidth > 700) {
+        closeMobileNav();
+      }
+    };
+
+    if (showNav) {
+      document.addEventListener("click", handleClickOutside);
+      window.addEventListener("resize", handleResize);
+    } else {
+      document.removeEventListener("click", handleClickOutside);
+      window.removeEventListener("resize", handleResize);
+    }
 
     return () => {
-      document.documentElement.style.scrollBehavior = "unset";
-      document.body.style.scrollBehavior = "unset";
+      document.removeEventListener("click", handleClickOutside);
+      window.removeEventListener("resize", handleResize);
     };
-  }, []);
+  }, [showNav]);
 
   const links = [
     {
