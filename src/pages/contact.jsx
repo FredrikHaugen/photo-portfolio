@@ -5,25 +5,30 @@ function ContactForm() {
   const [subject, setSubject] = useState('');
   const [content, setContent] = useState('');
   const [submitted, setSubmitted] = useState(false);
-  const [emailError, setEmailError] = useState(false); // new state variable
+  const [emailError, setEmailError] = useState(false);
 
   let submittedText = '';
 
   const isValidEmail = (email) => {
     return email.includes('@') && email.includes('.');
-  }; // new function to check for valid email
+  };
+  const delay = ms => new Promise(res => setTimeout(res, ms));
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-
-    if (!isValidEmail(email)) { // check if email is valid
-      setEmailError(true); // set emailError state to true if email is invalid
+  
+    if (!isValidEmail(email)) {
+      setEmailError(true);
       return;
     }
-
+  
     submittedText = "Thank you for your message about " + subject;
     setSubmitted(true);
+    await delay(2000);
+
+    handleClear();
   };
+  
 
   const handleClear = () => {
     setEmail('');
@@ -31,7 +36,7 @@ function ContactForm() {
     setContent('');
     submittedText = '';
     setSubmitted(false);
-    setEmailError(false); // reset emailError state when clearing the form
+    setEmailError(false);
   };
 
   if (submitted) {

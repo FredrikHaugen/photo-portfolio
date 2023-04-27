@@ -1,13 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Sora:wght@100;200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * {
-  font-family: Sora;
+  font-family: 'Lato', sans-serif;
   scroll-behavior: smooth;
 }
+
 
 .portfolio {
   height: 100vh;
@@ -40,9 +41,20 @@
   display: none;
 }
 
+.nav-toggler {
+  display: none;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 20px;
+}
+
 @media (max-width: 700px) {
   .topbar .nav-toggler {
     width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 20px;
+    
   }
 
   .topbar .fa {
@@ -100,7 +112,8 @@
 }
 
 .tabs .tab-button:hover {
-  font-size: 20px;
+  color: gray;
+  transition: ease-in-out 200ms;
 }
 
 .section-header {
@@ -127,7 +140,6 @@ footer .counter {
   display: none;
 }
 
-/* preloader start */
 .preloader {
   position: fixed;
   text-align: center;
@@ -177,27 +189,19 @@ footer .counter {
   }
 }
 
-/* preloader end */
-
-/* scrollbar */
-
-/* width */
 ::-webkit-scrollbar {
   width: 5px;
 }
 
-/* Track */
 ::-webkit-scrollbar-track {
   background: #1a161600;
 }
 
-/* Handle */
 ::-webkit-scrollbar-thumb {
   background: #888;
   border-radius: 5px;
 }
 
-/* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }

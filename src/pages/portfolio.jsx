@@ -6,10 +6,7 @@ export default function Portfolio() {
   const [open, setOpen] = useState(false);
   const [selectedImg, setSelectedImg] = useState(null);
 
-  const handleOpen = () => {
-    setOpen(true);
-  };
-
+  const handleOpen = () => setOpen(true);
   const handleClose = () => {
     setOpen(false);
     setSelectedImg(null);
@@ -27,86 +24,77 @@ export default function Portfolio() {
       </div>
 
       <div className="grid md:grid-cols-2 sm:grid-cols-1 gap-4">
-        {projects.map((proj) => {
-          return (
-            <div key={proj.id} className="p-4 shadow-md space-y-4 bg-white">
-              <div
-                className="h-[20vh] relative cursor-pointer"
-                onClick={() => openModal(proj.img)}
-              >
-                <img
-                  loading="lazy"
-                  alt=""
-                  src={proj.img}
-                  className="absolute inset-0 object-cover object-center w-full h-full"
-                />
-              </div>
-              <div className="flex justify-end space-x-4 items-center opacity-75">
-  <p className="text-slate-900 text-sm font-bold pr-[2%]">{proj.title}</p>
-  {proj.links.map((link) => {
-    return (
-      <a
-        key={link.id}
-        href={link.link}
-        target={'_blank'}
-        rel="noreferrer"
-        className="h-5 cursor-pointer text-2xl text-slate-900 flex items-center hover:text-slate-500 ease-in-out duration-500"
-      >
-        {link.icon}
-      </a>
-    );
-  })}
-</div>
-
-
-
+        {projects.map((proj) => (
+          <div key={proj.id} className="p-4 shadow-md space-y-4 bg-white">
+            <div
+              className="h-[20vh] relative cursor-pointer"
+              onClick={() => openModal(proj.img)}
+            >
+              <img
+                loading="lazy"
+                alt=""
+                src={proj.img}
+                className="absolute inset-0 object-cover object-center w-full h-full"
+              />
             </div>
-          );
-        })}
+            <div className="flex justify-end space-x-4 items-center opacity-75">
+              <p className="text-slate-900 text-sm font-bold pr-[2%]">
+                {proj.title}
+              </p>
+              {proj.links.map((link) => (
+                <a
+                  key={link.id}
+                  href={link.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="h-5 cursor-pointer text-2xl text-slate-900 flex items-center hover:text-slate-500 ease-in-out duration-500"
+                >
+                  {link.icon}
+                </a>
+              ))}
+            </div>
+          </div>
+        ))}
       </div>
 
       <Modal
-  open={open}
-  onClose={handleClose}
-  closeOnOverlayClick={true}
-  aria-labelledby="modal-modal-title"
-  aria-describedby="modal-modal-description"
-  style={{
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "center",
-    outline: "none",
-    border: "none",
-  }}
-  onClick={handleClose}
->
-  <Box
-    sx={{
-      p: 2,
-      boxShadow: "none",
-    }}
-  >
-    <img
-      src={selectedImg}
-      alt=""
-      style={{
-        maxWidth: "95vw",
-        maxHeight: "95vh",
-        overflow: "hidden",
-        display: "block",
-        margin: "auto",
-      }}
-    />
-  </Box>
-</Modal>
-
-
-
-
-
+        open={open}
+        onClose={handleClose}
+        closeOnOverlayClick={true}
+        aria-labelledby="modal-modal-title"
+        aria-describedby="modal-modal-description"
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          outline: "none",
+          border: "none",
+        }}
+        onClick={handleClose}
+      >
+        <Box
+          sx={{
+            p: 2,
+            boxShadow: "none",
+          }}
+        >
+          <img
+            src={selectedImg}
+            alt=""
+            style={{
+              maxWidth: "95vw",
+              maxHeight: "95vh",
+              overflow: "hidden",
+              display: "block",
+              margin: "auto",
+            }}
+          />
+        </Box>
+      </Modal>
     </div>
   );
 }
+
 
 const projects = [
   {
