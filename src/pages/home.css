@@ -109,7 +109,7 @@
   border: 0.1px solid #555;
   backdrop-filter: blur(3px);
   position: absolute;
-    bottom: 12vh;
+    bottom: 6vh;
     right: 50vw;
     animation: move2 10s ease-in-out infinite;
   transform-origin: center center;
