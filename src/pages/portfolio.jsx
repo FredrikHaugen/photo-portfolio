@@ -99,7 +99,7 @@ export default function Portfolio() {
 const projects = [
   {
     title: 'San Francisco, CA, USA',
-    img: 'https://images.unsplash.com/photo-1682421231288-ffbc22975c76?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1964&q=80',
+    img: '/https://images.unsplash.com/photo-1682421231288-ffbc22975c76?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1964&q=80',
     links: [
       {
         icon: <FaUnsplash/>,
