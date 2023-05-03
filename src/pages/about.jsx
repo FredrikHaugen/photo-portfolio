@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaUnsplash, FaInstagram } from "react-icons/fa";
+import { FiMail } from 'react-icons/fi';
 
 export default function About() {
   return (
@@ -16,7 +17,7 @@ export default function About() {
           <span className="text-gray-500 text-xl">My name is </span>
           <div className="text-cyan-500 text-4xl font-bold">Mos Sukjaroenkraisri</div>
           <div className="text-xl text-gray-500 font-semibold">I have a deep passion for urban and landscape photography</div>
-          <div className="font-light text-gray-400">
+          <div className=" font-normal text-gray-400">
           As a passionate photographer, I am constantly seeking out new opportunities to capture the world through my lens. Whether I'm exploring the great outdoors or photographing candid moments of people, my goal is to convey the beauty and complexity of life through my work. I am grateful for the support of those who have encouraged me on this journey, and I value each and every credit given to me for my photography. If you're interested in seeing more of my work, please check out my Instagram page: @sauntered.globe.
           </div>
         </div>
@@ -49,5 +50,9 @@ const social = [
   {
     icon: <FaInstagram size={40}/>,
     link: 'https://instagram.com/sauntered.globe?igshid=YmMyMTA2M2Y=',
+  },
+  {
+    icon: <FiMail size={40}/>,
+    link: 'mailto:contactme@suantered.net',
   }
 ];
